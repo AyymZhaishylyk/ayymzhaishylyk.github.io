@@ -1,17 +1,8 @@
 // About Buttons
 function callAbout() {
-  var x = document.getElementById("about");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-  var x = document.getElementById("aboutPush");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
+  $('#about').slideToggle('slow');
+  $('#aboutPush').slideToggle('slow');
+}
 
 
 //Randomizer
