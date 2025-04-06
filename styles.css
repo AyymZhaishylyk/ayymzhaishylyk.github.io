@@ -95,6 +95,7 @@ li {
 .social{
 	position: fixed;
 	right:30px;
+	top:12;
 
 }
 
@@ -116,7 +117,7 @@ li {
   left: 0;
   right: 0;
   margin: 0 auto;
-  max-width: 1920px;
+  width: 100%;
   z-index: 9999;
   padding: 20px;
   }
