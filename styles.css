@@ -113,12 +113,11 @@ li {
   left: 0;
   right: 0;
   margin: 0 auto;
-  max-width: 800px; /* or whatever fits your design */
+  max-width: 1920px; /* or whatever fits your design */
   z-index: 9999; /* make sure it's on top */
   display: none;
   padding: 20px; /* spacing inside */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* optional polish */
-}
+  }
 
 @media screen and (max-width: 600px) {
   .gallery {
