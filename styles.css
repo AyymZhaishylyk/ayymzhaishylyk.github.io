@@ -107,14 +107,6 @@ li {
 	
 }
 
-.button2{
-	position: relative;
-	background-color: transparent;
-	border: none;
-	cursor: url(assets/select.cur), auto;
-	font-family: Arial;	
-}
-
 #bio{
 	position: fixed; 
 	margin-left: 125px;
