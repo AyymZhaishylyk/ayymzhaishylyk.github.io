@@ -6,14 +6,14 @@
 display: inline-block;
 }
 
-.gallery{
-	position: absolute;
-	display: flex;
-	flex-wrap: wrap;
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-content: center;
-  margin-top: 15px;
   gap: 10px;
+  margin-top: 40px; /* ensures space for the fixed header and About */
+  position: relative; /* very important */
+  z-index: 1; /* make sure it’s *under* #about */
 }
 
 @media screen and (max-width: 600px) {
@@ -108,25 +108,18 @@ li {
 	
 }
 
-.button2{
-	position: relative;
-	background-color: transparent;
-	border: none;
-	cursor: url(assets/select.cur), auto;
-	font-family: Arial;	
-}
 
-#bio{
-	position: relative; 
-	margin-left: 125px;
-
-}
-#cv{
-	position: relative; /*change to fixed*/
-	margin-left: 125px;
-
-		
-}
+#about {
+  display: none;
+  position: fixed;
+  top: 60px; /* adjust based on your layout */
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 1920px;
+  z-index: 9999;
+  padding: 20px;
+  }
 
 @media screen and (max-width: 600px) {
   .gallery {
