@@ -1,6 +1,11 @@
 // About Buttons
 function callAbout() {
-  $('#about').stop(true, true).slideToggle('slow');
+  const about = document.getElementById("about");
+  if (about.style.display === "block") {
+    about.style.display = "none";
+  } else {
+    about.style.display = "block";
+  }
 }
 
 
