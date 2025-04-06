@@ -1,286 +1,153 @@
 .body{
-
-cursor: crosshair;
-
+	cursor: crosshair;
 }
-
-
 
 .content {
-
 display: inline-block;
-
 }
 
-
-
-.gallery {
-
-  display: flex;
-
-  flex-wrap: wrap;
-
-  justify-content: center;
-
-  gap: 10px;
-
-  margin-top: 40px; /* ensures space for the fixed header and About */
-
-  position: relative; /* very important */
-
-  z-index: 1; /* make sure it’s *under* #about */
-
+.gallery{
+	position: absolute;
+	display: flex;
+	flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin-top: 15px;
+  gap: 10px;
 }
-
-
 
 @media screen and (max-width: 600px) {
-
-  .gallery {
-
-    width: 100%;
-
-    
-
-  }
-
+  .gallery {
+    width: 100%;
+    
+  }
 }
-
-
 
 * {
-
-  box-sizing: border-box;
-
+  box-sizing: border-box;
 }
-
-
 
 /* Create two equal columns that floats next to each other */
-
 .column {
-
-  float: right;
-
-  width: 68%;
-
-
+  float: right;
+  width: 68%;
 
 }
-
-
 
 /* Clear floats after the columns */
 
-
-
 .row:after {
-
-  content: "";
-
-  display: table;
-
-  clear: both;
-
+  content: "";
+  display: table;
+  clear: both;
 }
-
 #back{
-
-position: fixed;
-
-cursor: url(assets/select.cur), auto;
-
+	position: fixed;
+	cursor: url(assets/select.cur), auto;
 }
-
 @media screen and (max-width: 600px) {
-
-  .column {
-
-    width: 100%;
-
-    margin-top: 200px;
-
-  }
-
+  .column {
+    width: 100%;
+    margin-top: 200px;
+  }
 }
-
-
 
 p{
-
-font-family: arial;
-
-font-size: 10pt;
-
+	font-family: arial;
+	font-size: 10pt;
 }
-
-
 
 @media screen and (max-width: 600px) {
-
-  .menu ul {
-
-    float: none;
-
-    width: 100%;
-
-  }
-
+  .menu ul {
+    float: none;
+    width: 100%;
+  }
 }
-
-
 
 ul{
-
-  padding-left: 20pt;
-
-  padding-right: 20pt;
-
-  padding-bottom: 20pt;
-
-  overflow: hidden;
-
-  position: fixed;
-
-  top: 0;
-
-  font-family: Arial;
-
-  font-size: 10pt;
-
+  padding-left: 20pt;
+  padding-right: 20pt;
+  padding-bottom: 20pt;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  font-family: Arial;
+  font-size: 10pt;
 }
-
-
 
 li {
-
-flex: 1;
-
-display: flex;
-
-justify-content: center;
-
-align-items: center;
-
-display: inline;
-
-padding-bottom: 20pt;
-
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: inline;
+	padding-bottom: 20pt;
 }
-
 .topnav a{
 
-
-
-margin-right: 10px;
-
-  text-decoration: none;
-
-  font-family: arial;
-
-  font-size: 10pt;
-
-  color: black;
-
+	margin-right: 10px;
+  text-decoration: none;
+  font-family: arial;
+  font-size: 10pt;
+  color: black;
 }
 
-
-
 .social{
-
-position: fixed;
-
-right:30px;
-
-
+	position: fixed;
+	right:30px;
 
 }
 
 .button1{
-
-position: relative;
-
-background-color: transparent;
-
-border: none;
-
-cursor: url(assets/select.cur), auto;
-
-margin-left: 50px;
-
-font-family: Arial;
-
-
+	position: relative;
+	background-color: transparent;
+	border: none;
+	cursor: url(assets/select.cur), auto;
+	margin-left: 50px;
+	font-family: Arial;
+	
 }
 
+.button2{
+	position: relative;
+	background-color: transparent;
+	border: none;
+	cursor: url(assets/select.cur), auto;
+	font-family: Arial;	
+}
 
+#bio{
+	position: relative; 
+	margin-left: 125px;
 
-#about {
+}
+#cv{
+	position: relative; /*change to fixed*/
+	margin-left: 125px;
 
-  position: fixed;
-
-  top: 20px; /* adjust if needed */
-
-  left: 0;
-
-  right: 0;
-
-  margin: 0 auto;
-
-  max-width: 1920px; /* or whatever fits your design */
-
-  z-index: 9999; /* make sure it's on top */
-
-  display: none;
-
-  padding: 20px; /* spacing inside */
-
-  }
-
-
+		
+}
 
 @media screen and (max-width: 600px) {
-
-  .gallery {
-
-    width: 100%;
-
-    
-
-  }
-
+  .gallery {
+    width: 100%;
+    
+  }
 }
-
-
 
 .videocircle{
-
-width: 400px;
-
-height: 400px;
-
+	width: 400px;
+	height: 400px;
 }
-
 .video1{
-
-width: 500px;
-
+	width: 500px;
 }
-
 .video2{
-
-width: 700px;
-
+	width: 700px;
 }
-
-
 
 .embed{
-
-aspect-ratio: 16 / 9;
-
-  width: 100%;
-
-  margin-bottom: 15px;
-
+	aspect-ratio: 16 / 9;
+  width: 100%;
+  margin-bottom: 15px;
 }
