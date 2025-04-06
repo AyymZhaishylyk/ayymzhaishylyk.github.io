@@ -107,15 +107,9 @@ li {
 	
 }
 
-#bio{
+#about{
 	position: fixed; 
 	margin-left: 125px;
-
-}
-#cv{
-	position: fixed; /*change to fixed*/
-	margin-left: 125px;
-
 		
 }
 
