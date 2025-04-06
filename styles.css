@@ -7,49 +7,49 @@ display: inline-block;
 }
 
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 40px; /* ensures space for the fixed header and About */
-  position: relative; /* very important */
-  z-index: 1; /* make sure it’s *under* #about */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 60px; /* Add margin to the top of the gallery, below the fixed menu */
+  position: relative; /* very important */
+  z-index: 1; /* make sure it’s *under* #about */
 }
 
 @media screen and (max-width: 600px) {
-  .gallery {
-    width: 100%;
-    
-  }
+  .gallery {
+    width: 100%;
+    
+  }
 }
 
 * {
-  box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Create two equal columns that floats next to each other */
 .column {
-  float: right;
-  width: 68%;
+  float: right;
+  width: 68%;
 
 }
 
 /* Clear floats after the columns */
 
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 #back{
 	position: fixed;
 	cursor: url(assets/select.cur), auto;
 }
 @media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    margin-top: 200px;
-  }
+  .column {
+    width: 100%;
+    margin-top: 200px;
+  }
 }
 
 p{
@@ -58,10 +58,10 @@ p{
 }
 
 @media screen and (max-width: 600px) {
-  .menu ul {
-    float: none;
-    width: 100%;
-  }
+  .menu ul {
+    float: none;
+    width: 100%;
+  }
 }
 
 ul{
@@ -69,33 +69,38 @@ ul{
   padding-right: 20pt;
   padding-bottom: 20pt;
   overflow: hidden;
-  position: fixed;
+  position: fixed; /* Make the menu stick */
   top: 0;
+  left: 0;
+  width: 100%; /* Ensure it spans the entire width */
+  background-color: white; /* Add a background color, so it's visible */
+  z-index: 1000; /* Ensure it's above other elements */
   font-family: Arial;
   font-size: 10pt;
+  margin: 0; /* Reset default margin */
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: row; /* Horizontal layout */
+  align-items: center; /* Vertically center items */
+  justify-content: space-between; /* Space items evenly */
+  padding-top: 20px;
 }
 
 li {
-	flex: 1;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	display: inline;
-	padding-bottom: 20pt;
 }
 .topnav a{
 
 	margin-right: 10px;
-  text-decoration: none;
-  font-family: arial;
-  font-size: 10pt;
-  color: black;
+  text-decoration: none;
+  font-family: arial;
+  font-size: 10pt;
+  color: black;
 }
 
 .social{
-	position: fixed;
-	right:30px;
-
+	position: static; /* Change to static, so it aligns with flexbox */
+  display: flex; /* Use flexbox for horizontal layout */
+  align-items: center; /* Vertically center items */
 }
 .button1{
 	position: relative;
@@ -108,22 +113,22 @@ li {
 }
 
 #about {
-  position: fixed;
-  top: 20px; /* adjust if needed */
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  max-width: 1920px; /* or whatever fits your design */
-  z-index: 9999; /* make sure it's on top */
-  display: none;
-  padding: 20px; /* spacing inside */
-  }
+  position: fixed;
+  top: 60px; /* adjust if needed.  Height of ul + spacing */
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 1920px; /* or whatever fits your design */
+  z-index: 9999; /* make sure it's on top */
+  display: none;
+  padding: 20px; /* spacing inside */
+  }
 
 @media screen and (max-width: 600px) {
-  .gallery {
-    width: 100%;
-    
-  }
+  .gallery {
+    width: 100%;
+    
+  }
 }
 
 .videocircle{
@@ -139,6 +144,6 @@ li {
 
 .embed{
 	aspect-ratio: 16 / 9;
-  width: 100%;
-  margin-bottom: 15px;
+  width: 100%;
+  margin-bottom: 15px;
 }
