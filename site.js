@@ -8,6 +8,10 @@ function callAbout() {
   }
 }
 
+document.getElementById("about-image").addEventListener("click", function() {
+  document.getElementById("about").style.display = "none";
+});
+
 
 //Randomizer
 var images = $('.content');
