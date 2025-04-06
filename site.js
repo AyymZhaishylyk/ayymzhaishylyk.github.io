@@ -1,7 +1,6 @@
 // About Buttons
 function callAbout() {
   $('#about').slideToggle('slow');
-  $('#aboutPush').slideToggle('slow');
 }
 
 
