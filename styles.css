@@ -107,11 +107,17 @@ li {
 }
 
 #about {
-    position: fixed;
-    margin-left: 125px;
-    background: white;
-    z-index: 1000; /* This is the important part */
-    display: none; /* Start hidden */
+  position: fixed;
+  top: 60px; /* adjust if needed */
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 800px; /* or whatever fits your design */
+  background: white;
+  z-index: 9999; /* make sure it's on top */
+  display: none;
+  padding: 20px; /* spacing inside */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* optional polish */
 }
 
 @media screen and (max-width: 600px) {
