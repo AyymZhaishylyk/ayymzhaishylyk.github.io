@@ -1,120 +1,185 @@
 .body{
-	cursor: crosshair;
+
+cursor: crosshair;
+
 }
+
+
 
 .content {
+
 display: inline-block;
+
 }
 
+
+
 .gallery {
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  margin-top: 60px; /* Add margin to the top of the gallery, below the fixed menu */
+  margin-top: 40px; /* ensures space for the fixed header and About */
   position: relative; /* very important */
   z-index: 1; /* make sure it’s *under* #about */
+
 }
+
+
 
 @media screen and (max-width: 600px) {
+
   .gallery {
     width: 100%;
-    
+ 
   }
+
 }
+
+
 
 * {
+
   box-sizing: border-box;
+
 }
 
+
+
 /* Create two equal columns that floats next to each other */
+
 .column {
+
   float: right;
   width: 68%;
 
+
+
 }
 
+
+
 /* Clear floats after the columns */
+
+
 
 .row:after {
   content: "";
   display: table;
   clear: both;
+
 }
+
 #back{
-	position: fixed;
-	cursor: url(assets/select.cur), auto;
+
+position: fixed;
+cursor: url(assets/select.cur), auto;
+
 }
+
 @media screen and (max-width: 600px) {
+
   .column {
+
     width: 100%;
     margin-top: 200px;
+
   }
+
 }
+
+
 
 p{
-	font-family: arial;
-	font-size: 10pt;
+
+font-family: arial;
+font-size: 10pt;
+
 }
+
+
 
 @media screen and (max-width: 600px) {
+
   .menu ul {
+
     float: none;
     width: 100%;
+
   }
+
 }
+
+
 
 ul{
-  padding-left: 20pt;
-  padding-right: 20pt;
-  padding-bottom: 20pt;
-  overflow: hidden;
-  position: fixed; /* Make the menu stick */
-  top: 0;
-  left: 0;
-  width: 100%; /* Ensure it spans the entire width */
-  background-color: white; /* Add a background color, so it's visible */
-  z-index: 1000; /* Ensure it's above other elements */
-  font-family: Arial;
-  font-size: 10pt;
-  margin: 0; /* Reset default margin */
-  display: flex; /* Use flexbox for alignment */
-  flex-direction: row; /* Horizontal layout */
-  align-items: center; /* Vertically center items */
-  justify-content: space-between; /* Space items evenly */
-  padding-top: 20px;
+
+  padding-left: 20pt;
+  padding-right: 20pt;
+  padding-bottom: 20pt;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  font-family: Arial;
+  font-size: 10pt;
+
 }
+
+
 
 li {
-	display: inline;
+
+flex: 1;
+display: flex;
+justify-content: center;
+align-items: center;
+display: inline;
+padding-bottom: 20pt;
+
 }
+
 .topnav a{
 
-	margin-right: 10px;
-  text-decoration: none;
-  font-family: arial;
-  font-size: 10pt;
-  color: black;
+
+
+margin-right: 10px;
+text-decoration: none;
+font-family: arial;
+font-size: 10pt;
+color: black;
+
 }
+
+
 
 .social{
-	position: static; /* Change to static, so it aligns with flexbox */
-  display: flex; /* Use flexbox for horizontal layout */
-  align-items: center; /* Vertically center items */
-}
-.button1{
-	position: relative;
-	background-color: transparent;
-	border: none;
-	cursor: url(assets/select.cur), auto;
-	margin-left: 50px;
-	font-family: Arial;
-	
+
+position: fixed;
+right:30px;
+
+
+
 }
 
+.button1{
+
+position: relative;
+background-color: transparent;
+border: none;
+cursor: url(assets/select.cur), auto;
+margin-left: 50px;
+font-family: Arial;
+
+
+}
+
+
+
 #about {
+
   position: fixed;
-  top: 60px; /* adjust if needed.  Height of ul + spacing */
+  top: 20px; /* adjust if needed */
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -122,28 +187,50 @@ li {
   z-index: 9999; /* make sure it's on top */
   display: none;
   padding: 20px; /* spacing inside */
+
   }
+
+
 
 @media screen and (max-width: 600px) {
+
   .gallery {
+
     width: 100%;
+
     
+
   }
+
 }
+
+
 
 .videocircle{
-	width: 400px;
-	height: 400px;
-}
-.video1{
-	width: 500px;
-}
-.video2{
-	width: 700px;
+
+width: 400px;
+height: 400px;
+
 }
 
+.video1{
+
+width: 500px;
+
+}
+
+.video2{
+
+width: 700px;
+
+}
+
+
+
 .embed{
-	aspect-ratio: 16 / 9;
+
+aspect-ratio: 16 / 9;
   width: 100%;
   margin-bottom: 15px;
+
 }
