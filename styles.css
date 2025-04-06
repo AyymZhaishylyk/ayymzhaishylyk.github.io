@@ -11,7 +11,7 @@ display: inline-block;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  margin-top: 200px; /* ensures space for the fixed header and About */
+  margin-top: 40px; /* ensures space for the fixed header and About */
   position: relative; /* very important */
   z-index: 1; /* make sure it’s *under* #about */
 }
