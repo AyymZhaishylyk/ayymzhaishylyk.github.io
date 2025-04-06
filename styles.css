@@ -106,10 +106,12 @@ li {
 	
 }
 
-#about{
-	position: fixed; 
-	margin-left: 125px;
-		
+#about {
+    position: fixed;
+    margin-left: 125px;
+    background: white;
+    z-index: 1000; /* This is the important part */
+    display: none; /* Start hidden */
 }
 
 @media screen and (max-width: 600px) {
