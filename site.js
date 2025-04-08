@@ -35,7 +35,7 @@ window.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         overlay.remove();
       }, 1000);
-    }, 2000);
+    }, 1000);
   }
 });
 
