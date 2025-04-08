@@ -1,7 +1,6 @@
 @font-face {
   font-family: 'MSGothic';
-  src: url('assets/MS Gothic.woff') format('woff');
-  src: url('assets/MS Gothic.woff2') format('woff2');
+  src: url('assets/MS gothic.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -238,13 +237,11 @@ ul.menu img {
   align-items: center;
   z-index: 10000;
   opacity: 1;
+  pointer-events: none;
   transition: opacity 1s ease;
-  pointer-events: none; /* so it doesn't block interactions after fade */
 }
 
 #logo-overlay img {
-  max-width: 110vw;
+  max-width: 100vw;
   max-height: 100vh;
-  
-
 }
