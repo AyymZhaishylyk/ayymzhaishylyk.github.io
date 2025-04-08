@@ -8,54 +8,37 @@ function callAbout() {
   }
 }
 
-document.getElementById("about-image").addEventListener("click", function() {
-  document.getElementById("about").style.display = "none";
-});
 
-window.addEventListener("load", function() {
-  const overlay = document.getElementById("logo-overlay");
-  setTimeout(() => {
-    overlay.style.opacity = 0;
-    setTimeout(() => {
-      overlay.style.display = "none";
-    }, 1000); // wait for fade-out transition
-  }, 1000); // show for 2 seconds
-});
 
 window.addEventListener('DOMContentLoaded', () => {
-  const hasVisited = sessionStorage.getItem('visited');
-  const isFromExternal = !document.referrer || !document.referrer.includes(window.location.hostname);
+  const navType = performance.getEntriesByType("navigation")[0].type;
+  const isReload = navType === "reload";
+  const referrer = document.referrer;
+  const isInternal = referrer.includes(window.location.hostname);
 
-  if (!hasVisited && isFromExternal) {
+  // Show logo ONLY if user is visiting for the first time or refreshing
+  if (!isInternal || isReload) {
     const overlay = document.createElement('div');
     overlay.id = 'logo-overlay';
-    overlay.style.position = 'fixed';
-    overlay.style.top = 0;
-    overlay.style.left = 0;
-    overlay.style.width = '100vw';
-    overlay.style.height = '100vh';
-    overlay.style.display = 'flex';
-    overlay.style.justifyContent = 'center';
-    overlay.style.alignItems = 'center';
-    overlay.style.backgroundColor = 'white';
-    overlay.style.zIndex = 10000;
-    overlay.style.opacity = 1;
-    overlay.style.transition = 'opacity 1s ease';
-    overlay.innerHTML = `
-      <img src="assets/logo1.png" alt="Logo" style="max-width: 110vw; max-height: 110vh;" />
-    `;
+
+    const logo = document.createElement('img');
+    logo.src = 'assets/faded2.png'; // <-- change this to your actual logo path
+    logo.alt = 'Logo';
+
+    overlay.appendChild(logo);
     document.body.appendChild(overlay);
 
     setTimeout(() => {
-      overlay.style.opacity = 0;
+      overlay.style.opacity = '0';
+
+      // Remove it from DOM after fade
       setTimeout(() => {
         overlay.remove();
       }, 1000);
     }, 2000);
-
-    sessionStorage.setItem('visited', 'true');
   }
 });
+
 
 
 
