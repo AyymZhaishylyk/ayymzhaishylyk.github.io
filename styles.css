@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'MSGothic';
+  src: url('assets/MS gothic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .body{
 	cursor: crosshair;
 }
@@ -11,7 +18,7 @@ display: inline-block;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  margin-top: 40px; /* ensures space for the fixed header and About */
+  margin-top: 60px; /* ensures space for the fixed header and About */
   position: relative; /* very important */
   z-index: 1; /* make sure it’s *under* #about */
 }
@@ -32,6 +39,7 @@ display: inline-block;
   float: right;
   width: 68%;
 
+
 }
 
 /* Clear floats after the columns */
@@ -40,10 +48,18 @@ display: inline-block;
   content: "";
   display: table;
   clear: both;
+
 }
-#back{
-	position: fixed;
-	cursor: url(assets/select.cur), auto;
+#back {
+  position: fixed;
+  top: 0px;
+  left: 28px;
+  z-index: 10000;
+}
+
+#back img {
+  height: 90px; /* or adjust to your liking */
+  display: block;
 }
 @media screen and (max-width: 600px) {
   .column {
@@ -52,9 +68,21 @@ display: inline-block;
   }
 }
 
+.work-title {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18pt;
+  font-weight: normal;
+}
+
+.subtitle {
+  font-family: "MSGothic", sans-serif;
+  font-size: 12pt;
+  font-weight: normal;
+}
+
 p{
-	font-family: arial;
-	font-size: 10pt;
+	font-family: 'MSGothic';
+	font-size: 12pt;
 }
 
 @media screen and (max-width: 600px) {
@@ -71,42 +99,93 @@ ul{
   overflow: hidden;
   position: fixed;
   top: 0;
-  font-family: Arial;
-  font-size: 10pt;
+  font-family: 'MSGothic';
+  font-size: 11pt;
+
 }
 
 li {
-	flex: 1;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	display: inline;
-	padding-bottom: 20pt;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-.topnav a{
+ul.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* <-- align everything to the top */
+  height: 70px; /* You can tweak this */
+  padding: 0 20pt;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+ 
+}
 
-	margin-right: 10px;
+ul.menu li {
+  display: flex;
+  align-items: center;
+}
+ul.menu li.about {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+ul.menu .left {
+  flex: 1;
+  align-items: center;
+  display: flex;
+  height: 100%; /* makes sure the image is centered */
+}
+
+ul.menu .about {
+  flex: 1;
+  justify-content: center;
+  display: flex;
+}
+
+
+ul.menu li.right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  align-items: center;
+}
+
+ul.menu a {
   text-decoration: none;
-  font-family: arial;
-  font-size: 10pt;
   color: black;
+  font-weight: normal;
+}
+ul.menu li.logo {
+  flex: 1;
+  display: flex;
+  align-items: center;
 }
 
-.social{
-	position: fixed;
-	right:30px;
-	top:12;
-
+ul.menu .logo img {
+  position: absolute;
+  top: -20px; /* adjust to push it below the bar */
+  left: 20;
+  height: 100px; /* or whatever size you want */
 }
 
-.button1{
-	position: relative;
-	background-color: transparent;
-	border: none;
-	cursor: url(assets/select.cur), auto;
-	margin-left: 50px;
-	font-family: Arial;
-	
+ul.menu img {
+  height: 40px; /* increase size */
+  display: block;
+  padding: 5px 0; /* add some space above/below */
+}
+
+.button1 {
+  font-family: "MSGothic", sans-serif;
+  font-size: 11pt;
+  background-color: transparent;
+  border: none;
+  margin-right: 300px;
+  padding: 0;
+  cursor: url(assets/select.cur), auto;
 }
 
 
@@ -117,10 +196,11 @@ li {
   left: 0;
   right: 0;
   margin: 0 auto;
-  width: 100%;
+  width: 112%;
   z-index: 9999;
-  padding: 20px;
+  
   }
+
 
 @media screen and (max-width: 600px) {
   .gallery {
@@ -144,4 +224,26 @@ li {
 	aspect-ratio: 16 / 9;
   width: 100%;
   margin-bottom: 15px;
+}
+
+#logo-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  opacity: 1;
+  transition: opacity 1s ease;
+  pointer-events: none; /* so it doesn't block interactions after fade */
+}
+
+#logo-overlay img {
+  max-width: 110vw;
+  max-height: 100vh;
+  
+
 }
