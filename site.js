@@ -8,7 +8,9 @@ function callAbout() {
   }
 }
 
-
+document.getElementById("about-image").addEventListener("click", function() {
+    document.getElementById("about").style.display = "none";
+});
 
 window.addEventListener('DOMContentLoaded', () => {
   const navType = performance.getEntriesByType("navigation")[0].type;
