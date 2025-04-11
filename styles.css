@@ -167,10 +167,13 @@ ul.menu li.logo {
 }
 
 ul.menu .logo img {
-  position: absolute;
-  top: -20px; /* adjust to push it below the bar */
-  left: 20;
-  height: 100px; /* or whatever size you want */
+  height: 8vw; /* Responsive to screen width */
+  max-height: 100px; /* Prevent it from getting too big */
+  min-height: 50px; /* Prevent it from getting too small */
+  width: auto;
+  position: relative; /* You can switch from absolute to relative for more natural flow */
+  top: -20;
+  left: 0;
 }
 
 ul.menu img {
