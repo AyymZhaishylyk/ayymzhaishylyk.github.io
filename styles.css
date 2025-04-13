@@ -279,8 +279,17 @@ ul.menu img {
 }
 
 .tooltip-caption {
-    font-size: 9pt; /* Slightly smaller than the title's 11pt */
-    display: block; /* Ensure the caption takes its own line */
+    font-size: 9pt;
+    display: block;
+}
+
+.tooltip-tight-title {
+    line-height: 0.8;
+    display: inline-block;
+}
+
+.tooltip-white-title {
+    color: white;
 }
 /* Ensure content is positioned to allow hover detection */
 .content {
