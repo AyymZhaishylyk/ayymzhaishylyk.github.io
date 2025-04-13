@@ -273,9 +273,15 @@ ul.menu img {
     background-color: transparent;
     pointer-events: none;
     z-index: 1000;
-    max-width: 300px; /* Adjust as needed */
+    max-width: 300px;
+    line-height: 1.2;
+    text-align: left;
 }
 
+.tooltip-caption {
+    font-size: 9pt; /* Slightly smaller than the title's 11pt */
+    display: block; /* Ensure the caption takes its own line */
+}
 /* Ensure content is positioned to allow hover detection */
 .content {
     position: relative; /* Maintains context for hover */
