@@ -1,6 +1,7 @@
 <html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'>
 
 <head>
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,18 +10,18 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="icon" href="assets/logo3.png">
 </head>
-<body style ="cursor: crosshair;">
+<body>
 <ul class="menu">
   <li class="logo" >
-    <a href="index.html" style= "cursor: url(assets/select.cur), auto;">
+    <a href="index.html" >
       <img src="assets/logo3.png" alt="ayym logo" />
     </a>
   </li>
   <li class="about"><button class="button1" onclick="callAbout()">ABOUT</button></li>
   <li class="right">
-    <a href="https://www.instagram.com/ayymzhaishylyk/" target="_blank" style="margin-right: 10px; cursor: url(assets/select.cur), auto;">IG</a>
-    <a href="https://betonklysma.bandcamp.com/album/demo-1" target="_blank" style="margin-right: 10px; cursor: url(assets/select.cur), auto;">BC</a>
-    <a href="mailto:ayymzhaishylyk@gmail.com" style="margin-right: 10px; cursor: url(assets/select.cur), auto;">CONTACT</a>
+    <a href="https://www.instagram.com/ayymzhaishylyk/" target="_blank" style="margin-right: 10px;">IG</a>
+    <a href="https://betonklysma.bandcamp.com/album/demo-1" target="_blank" style="margin-right: 10px;">BC</a>
+    <a href="mailto:ayymzhaishylyk@gmail.com" style="margin-right: 10px;">CONTACT</a>
   </li>
 </ul>
 	
@@ -30,61 +31,80 @@
 	
 	<div class="gallery">
 		<div class="content">					
-			<a href="limit and transgression.html" style="cursor: url(assets/select.cur), auto;"><img src="assets/transg/scan0(small).png" alt="ayym" width="350" ></a>
+			<a href="limit and transgression.html" data-title="LIMIT AND TRANSGRESSION">
+       <img src="assets/transg/scan0(small).png" alt="Limit and Transgression" width="350">
+      </a>
 		</div>
 
 		<div class="content">				
-			<a href="rabbit.html" style="cursor: url(assets/select.cur), auto;"><img src="assets/rabbit/scaan.png" alt="ayym" width="150" ></a>
+			<a href="rabbit.html" data-title="HOW TO PULL A RABBIT OUT OF A HAT">
+				<img src="assets/rabbit/scaan.png" alt="ayym" width="150" ></a>
 		</div>
 
 		<div class="content">
-			<a href="city.html" style="cursor: url(assets/select.cur), auto;"><img src="assets/imageof/icscan9.jpg" alt="ayym" width="500" ></a>
+			<a href="city.html" data-title="IMAGE OF A CITY">
+				<img src="assets/imageof/icscan9.jpg" alt="ayym" width="500" ></a>
 		</div>
 
 		<div class="content">
-		<a href="erik.html" style="cursor: url(assets/select.cur), auto;"><video class="video1" autoplay muted loop><source src="assets/erik/erikanimation.mp4" type="video/mp4"></video></a>
+		<a href="erik.html" data-title="ERIK VAN LIESHOUT WEBSITE">
+			<video class="video1" autoplay muted loop><source src="assets/erik/erikanimation.mp4" type="video/mp4"></video></a>
 		</div>
 
 		<div class="content">
-		<a href="differencerepitition.html" style="cursor: url(assets/select.cur), auto;"><img src="assets/difrep/drscan18.jpg" alt="ayym" width="500" ></a>
+		<a href="differencerepitition.html" data-title="DIFFERENCE AND REPEATITION">
+			<img src="assets/difrep/drscan18.jpg" alt="ayym" width="500" ></a>
 		</div>
 
 		<div class="content">
-		<a href="poezd.html" style="cursor: url(assets/select.cur), auto;"><img src="assets/poezd/1.png" alt="ayym" width="500" ></a>
+		<a href="poezd.html" data-title="AWAITING A DEPARTED TRAIN">
+			<img src="assets/poezd/1.png" alt="ayym" width="500" ></a>
 		</div>
 
 		<div class="content">
-		<a href="concrete.html" style="cursor: url(assets/select.cur), auto;"><video class="videocircle" autoplay muted loop><source src="assets/concrete/1.mp4" type="video/mp4"></video></a>
+		<a href="concrete.html" data-title="CONCRETE ENEMA">
+			<video class="videocircle" autoplay muted loop><source src="assets/concrete/1.mp4" type="video/mp4"></video></a>
 		</div>
 
 	    <div class="content">			    
-	    <a href="ref.html" style="cursor: url(assets/select.cur), auto;"><video class="video2" autoplay muted loop><source src="assets/ref/teaser.mp4" type="video/mp4"></video></a>
+	    <a href="ref.html" data-title="REF:EM2447229">
+	    	<video class="video2" autoplay muted loop><source src="assets/ref/teaser.mp4" type="video/mp4"></video></a>
 	    </div>
 
 		<div class="content">
-	    <a href="perspective.html" style="cursor: url(assets/select.cur), auto;"><img src="assets/perspective/covertrans.png" alt="ayym" width="300" ></a>
+	    <a href="perspective.html" data-title="POINT A">
+	    	<img src="assets/perspective/covertrans.png" alt="ayym" width="300" ></a>
 		</div>
 
 		<div class="content">
-		<a href="violin.html" style="cursor: url(assets/select.cur), auto;"><img src="assets/violin/cover2.png" alt="ayym" width="400" ></a>
+		<a href="violin.html" data-title="VIOLIN PHASE">
+			<img src="assets/violin/cover2.png" alt="ayym" width="400" ></a>
 		</div>
 
 		<div class="content">
-		<a href="type.html" style="cursor: url(assets/select.cur), auto;"><img src="assets/type/resqueposternoise.jpg" alt="ayym" width="500" ></a>
+		<a href="type.html" data-title="RESQUE MONO">
+			<img src="assets/type/resqueposternoise.jpg" alt="ayym" width="500" ></a>
 		</div>
 
 		<div class="content">
-		<a href="marc bijl.html" style="cursor: url(assets/select.cur), auto;"><img src="assets/marc bijl/thumbnail.jpg" alt="ayym" width="200" ></a>
+		<a href="marc bijl.html" data-title="MARC BIJL THE WORKS 1984-2084">
+			<img src="assets/marc bijl/thumbnail.jpg" alt="ayym" width="200" ></a>
 		</div>
 
 		<div class="content">
-		<a href="rv.html" style="cursor: url(assets/select.cur), auto;"><img src="assets/robbev/grassshader.png" alt="ayym" width="700" ></a>
-		</div>
-
-		<div class="content">
-		<a href="babalar.html" style="cursor: url(assets/select.cur), auto;"><img src="assets/babalar/cover4.jpg" alt="ayym" width="350" ></a>
+		<a href="rv.html" data-title="ROBBE VLAEMINCK WEBSITE">
+			<img src="assets/robbev/grassshader.png" alt="ayym" width="700" ></a>
 		</div>
 	</div> 
+
+	<div class="content">
+        <a href="babalar.html" data-title="BABALAR VOL. 1">
+            <img src="assets/babalar/cover4.jpg" alt="ayym" width="350">
+            
+        </a>
+    </div>
+ 
+
 	<script src="site.js" ></script>
 
 	</div>
