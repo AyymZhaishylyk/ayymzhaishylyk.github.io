@@ -90,18 +90,28 @@ document.addEventListener('mousemove', (e) => {
     }
 
     // Handle line breaks for specific titles
-    let tooltipContent = link.dataset.title;
+    let tooltipTitle = link.dataset.title;
     if (link.dataset.title === "HOW TO PULL A RABBIT OUT OF A HAT") {
-        tooltipContent = "HOW TO PULL<br>A RABBIT<br>OUT OF A HAT";
+        tooltipTitle = "HOW TO PULL<br>A RABBIT<br>OUT OF A HAT";
     } else if (link.dataset.title === "MARC BIJL THE WORKS 1984-2084") {
-        tooltipContent = "MARC BIJL<br>THE WORKS 1984-2084";
+        tooltipTitle = "MARC BIJL<br>THE WORKS 1984-2084";
     }
 
-    // Set the tooltip content with potential line breaks
+    // Get the caption, if it exists
+    const caption = link.dataset.caption || '';
+
+    // Construct the tooltip content with title and caption
+    let tooltipContent = tooltipTitle;
+    if (caption) {
+        tooltipContent += `<br><span class="tooltip-caption">${caption}</span>`;
+    }
+
+    // Set the tooltip content with title and caption
     tooltip.innerHTML = tooltipContent;
 
     tooltip.style.display = 'block';
 
+    // Recalculate dimensions after setting content
     const tooltipWidth = tooltip.offsetWidth || 100;
     const tooltipHeight = tooltip.offsetHeight || 20;
 
