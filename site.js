@@ -89,24 +89,42 @@ document.addEventListener('mousemove', (e) => {
         return;
     }
 
-    // Handle line breaks for specific titles
+    // Handle line breaks and tight line-height for specific titles
     let tooltipTitle = link.dataset.title;
+    const needsTightLineHeight = 
+        link.dataset.title === "HOW TO PULL A RABBIT OUT OF A HAT" || 
+        link.dataset.title === "MARC BIJL THE WORKS 1984-2084";
+
     if (link.dataset.title === "HOW TO PULL A RABBIT OUT OF A HAT") {
         tooltipTitle = "HOW TO PULL<br>A RABBIT<br>OUT OF A HAT";
     } else if (link.dataset.title === "MARC BIJL THE WORKS 1984-2084") {
         tooltipTitle = "MARC BIJL<br>THE WORKS 1984-2084";
     }
 
+    // Wrap the title in a span with tight line-height if needed
+    let titleContent = needsTightLineHeight 
+        ? `<span class="tooltip-tight-title">${tooltipTitle}</span>` 
+        : tooltipTitle;
+
     // Get the caption, if it exists
     const caption = link.dataset.caption || '';
 
     // Construct the tooltip content with title and caption
-    let tooltipContent = tooltipTitle;
+    let tooltipContent = titleContent;
     if (caption) {
         tooltipContent += `<br><span class="tooltip-caption">${caption}</span>`;
     }
 
-    // Set the tooltip content with title and caption
+    // Apply white color to both title and caption for specific titles
+    const needsWhiteColor = 
+        link.dataset.title === "REF:EM2447229" || 
+        link.dataset.title === "MARC BIJL THE WORKS 1984-2084";
+    
+    tooltipContent = needsWhiteColor 
+        ? `<span class="tooltip-white-title">${tooltipContent}</span>` 
+        : tooltipContent;
+
+    // Set the tooltip content
     tooltip.innerHTML = tooltipContent;
 
     tooltip.style.display = 'block';
